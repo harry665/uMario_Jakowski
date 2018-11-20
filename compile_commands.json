@@ -1,0 +1,292 @@
+[
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/AboutMenu.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/AboutMenu.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/AboutMenu.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Beetle.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Beetle.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Beetle.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Block.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Block.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Block.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/BlockDebris.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/BlockDebris.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/BlockDebris.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Bowser.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Bowser.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Bowser.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Bubble.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Bubble.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Bubble.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/BulletBill.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/BulletBill.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/BulletBill.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/BulletBillSpawner.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/BulletBillSpawner.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/BulletBillSpawner.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/CFG.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/CFG.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/CFG.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Cheep.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Cheep.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Cheep.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/CheepSpawner.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/CheepSpawner.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/CheepSpawner.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Coin.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Coin.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Coin.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Console.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Console.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Console.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Core.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Core.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Core.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Event.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Event.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Event.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Fire.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Fire.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Fire.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/FireBall.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/FireBall.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/FireBall.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Flag.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Flag.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Flag.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Flower.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Flower.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Flower.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Goombas.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Goombas.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Goombas.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Hammer.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Hammer.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Hammer.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/HammerBro.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/HammerBro.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/HammerBro.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/IMG.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/IMG.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/IMG.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Koppa.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Koppa.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Koppa.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Lakito.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Lakito.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Lakito.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/LevelEditor.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/LevelEditor.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/LevelEditor.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/LevelText.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/LevelText.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/LevelText.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/LoadingMenu.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/LoadingMenu.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/LoadingMenu.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/MainMenu.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MainMenu.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MainMenu.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Map.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Map.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Map.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/MapLevel.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MapLevel.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MapLevel.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Menu.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Menu.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Menu.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/MenuManager.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MenuManager.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MenuManager.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/MenuOption.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MenuOption.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MenuOption.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Minion.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Minion.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Minion.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Mushroom.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Mushroom.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Mushroom.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Music.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Music.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Music.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/MusicManager.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MusicManager.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/MusicManager.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/OptionsMenu.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/OptionsMenu.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/OptionsMenu.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/PauseMenu.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/PauseMenu.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/PauseMenu.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Pipe.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Pipe.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Pipe.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Plant.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Plant.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Plant.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Platform.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Platform.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Platform.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Player.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Player.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Player.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/PlayerFireBall.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/PlayerFireBall.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/PlayerFireBall.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Points.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Points.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Points.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Spikey.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Spikey.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Spikey.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Spring.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Spring.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Spring.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Sprite.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Sprite.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Sprite.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Squid.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Squid.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Squid.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Star.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Star.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Star.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Text.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Text.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Text.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Texture.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Texture.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Texture.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Toad.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Toad.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Toad.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/UpFire.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/UpFire.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/UpFire.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Vector2.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Vector2.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Vector2.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/Vine.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Vine.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/Vine.cpp"
+},
+{
+  "directory": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/usr/local/include/SDL2 -I/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext   -Wall -Wextra -pedantic -std=c++11 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -o CMakeFiles/uMario.dir/uNext/main.cpp.o -c /Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/main.cpp",
+  "file": "/Users/harry/Documents/HTW/Softwaretechnik/uMario_Jakowski/uNext/main.cpp"
+}
+]
