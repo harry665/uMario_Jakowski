@@ -70,7 +70,7 @@ private:
 	float jumpDistance;
 	float currentJumpDistance;
 
-	float currentFallingSpeed;
+    float currentFallingSpeed;  //neuer bereich für FallingSpeed
 
 	bool springJump;
 
@@ -168,7 +168,13 @@ public:
 	bool getMoveDirection();
 	void setNextFallFrameID(int nextFallFrameID);
 	void setCurrentJumpSpeed(float currentJumpSpeed);
-	void setMoveSpeed(int moveSpeed);
+    void setCurrentFallingSpeed(float currentFallingSpeed); //neuer bereich für FallingSpeed
+    void setCurrentJumpDistance(float currentJumpDistance); //neuer bereich für JumpDistance
+    void setJumpDistance(float JumpDistance); //neuer bereich für JumpDistance
+    void setjumpState (float jumpState);
+
+
+    void setMoveSpeed(int moveSpeed);
 
 	int getJumpState();
 

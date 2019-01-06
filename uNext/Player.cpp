@@ -1195,6 +1195,18 @@ void Player::setCurrentJumpSpeed(float currentJumpSpeed) {
 	this->currentJumpSpeed = currentJumpSpeed;
 }
 
+void Player::setCurrentFallingSpeed(float currentFallingSpeed) {
+    this->currentFallingSpeed = currentFallingSpeed;      // neuer Bereich für FallingSpeed
+}
+
+void Player::setCurrentJumpDistance(float currentJumpDistance) {
+    this->currentJumpDistance = currentJumpDistance;    // neuer Bereich für JumpDistance
+}
+
+void Player::setjumpState(float jumpState) {
+	this->jumpState = jumpState;    // neuer Bereich für jumpState
+}
+
 void Player::setMoveSpeed(int moveSpeed) {
 	this->moveSpeed = moveSpeed;
 }

@@ -28,7 +28,7 @@ file(COPY uNext/files DESTINATION .)
 include_directories(uNext)
 
 file(GLOB_RECURSE uMario_SOURCES "uNext/*.cpp")
-add_executable (uMario ${uMario_SOURCES})
+add_executable (uMario ${uMario_SOURCES} uNext/Wind.h uNext/Wind.cpp)
 
 target_link_libraries(uMario ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${SDL2_MIXER_LIBRARY})
 

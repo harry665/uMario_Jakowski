@@ -22,7 +22,10 @@ public:
 
 	static bool keySpace;
 
+	//static int keyIDA, keyIDS, keyIDD, keyIDSpace, keyIDShift;
+
 	static int keyIDA, keyIDS, keyIDD, keyIDSpace, keyIDShift;
+
 
 	static std::string getKeyString(int keyID);
 

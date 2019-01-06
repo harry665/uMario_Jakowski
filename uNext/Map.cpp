@@ -66,7 +66,7 @@ void Map::Update() {
 		UpdateMinionBlokcs();
 
 		UpdateMinions();
-		
+
 		if(!inEvent) {
 			UpdatePlayer();
 
@@ -106,7 +106,7 @@ void Map::Update() {
 			lBlockDebris.erase(lBlockDebris.begin() + i);
 		}
 	}
-	
+
 	for(unsigned int i = 0; i < lPoints.size(); i++) {
 		if(!lPoints[i]->getDelete()) {
 			lPoints[i]->Update();
@@ -140,7 +140,7 @@ void Map::UpdateMinions() {
 			}
 		}
 	}
-	
+
 	// ----- UPDATE MINION LIST ID
 	for(int i = 0; i < iMinionListSize; i++) {
 		for(int j = 0, jSize = lMinion[i].size(); j < jSize; j++) {
@@ -151,7 +151,7 @@ void Map::UpdateMinions() {
 					jSize = lMinion[i].size();
 					continue;
 				}
-				
+
 				if(floor(lMinion[i][j]->fXPos / 160) != i) {
 					lMinion[(int)floor((int)lMinion[i][j]->fXPos / 160)].push_back(lMinion[i][j]);
 					lMinion[i].erase(lMinion[i].begin() + j);
@@ -190,7 +190,7 @@ void Map::UpdateMinionsCollisions() {
 									lMinion[i][j]->setMinionState(-2);
 									lMinion[i][k]->collisionWithAnotherUnit();
 								}
-							
+
 								if(lMinion[i][j]->getYPos() - 4 <= lMinion[i][k]->getYPos() + lMinion[i][k]->iHitBoxY && lMinion[i][j]->getYPos() + 4 >= lMinion[i][k]->getYPos() + lMinion[i][k]->iHitBoxY) {
 									lMinion[i][k]->onAnotherMinion = true;
 								} else if(lMinion[i][k]->getYPos() - 4 <= lMinion[i][j]->getYPos() + lMinion[i][j]->iHitBoxY && lMinion[i][k]->getYPos() + 4 >= lMinion[i][j]->getYPos() + lMinion[i][j]->iHitBoxY) {
@@ -240,7 +240,7 @@ void Map::UpdateMinionsCollisions() {
 										lMinion[i][j]->setMinionState(-2);
 										lMinion[i + 1][k]->collisionWithAnotherUnit();
 									}
-									
+
 									if(lMinion[i][j]->getYPos() - 4 <= lMinion[i + 1][k]->getYPos() + lMinion[i + 1][k]->iHitBoxY && lMinion[i][j]->getYPos() + 4 >= lMinion[i + 1][k]->getYPos() + lMinion[i + 1][k]->iHitBoxY) {
 										lMinion[i + 1][k]->onAnotherMinion = true;
 									} else if(lMinion[i + 1][k]->getYPos() - 4 <= lMinion[i][j]->getYPos() + lMinion[i][j]->iHitBoxY && lMinion[i + 1][k]->getYPos() + 4 >= lMinion[i][j]->getYPos() + lMinion[i][j]->iHitBoxY) {
@@ -686,6 +686,10 @@ void Map::addLakito(int X, int Y, int iMaxXPos) {
 	lMinion[getListID(X)].push_back(new Lakito(X, Y, iMaxXPos));
 }
 
+void Map::addWind(int X, int Y, int iMaxXPos) {
+    lMinion[getListID(X)].push_back(new Wind(X, Y, iMaxXPos));
+}
+
 void Map::addVine(int X, int Y, int minionState, int iBlockID) {
 	lMinion[getListID(X)].push_back(new Vine(X, Y, minionState, iBlockID));
 	if(minionState == 0) {
@@ -735,7 +739,7 @@ int Map::getNumOfMinions() {
 void Map::loadGameData(SDL_Renderer* rR) {
 	std::vector<std::string> tSprite;
 	std::vector<unsigned int> iDelay;
-	
+
 	// ----- 0 Transparent -----
 	tSprite.push_back("transp");
 	iDelay.push_back(0);
@@ -2378,6 +2382,19 @@ void Map::loadGameData(SDL_Renderer* rR) {
 	vMinion.push_back(new Block(65, new Sprite(rR, tSprite, iDelay, false), true, false, false, true));
 	tSprite.clear();
 	iDelay.clear();
+    // ----- 66 ----- // new minion names wind
+    tSprite.push_back("wind_0");
+    iDelay.push_back(0);
+    vMinion.push_back(new Block(66, new Sprite(rR, tSprite, iDelay, false), true, false, true, true));
+    tSprite.clear();
+    iDelay.clear();
+    // ---- 67 ------ // every time the new minons blasts a wind
+    tSprite.push_back("wind_1");
+    iDelay.push_back(0);
+    vMinion.push_back(new Block(67, new Sprite(rR, tSprite, iDelay, false), true, false, true, true));
+    tSprite.clear();
+    iDelay.clear();
+
 
 	iBlockSize = vBlock.size();
 	iMinionSize = vMinion.size();
@@ -2457,6 +2474,8 @@ std::string Map::getLevelName() {
 void Map::loadMinionsLVL_1_1() {
 	clearMinions();
 
+    //addWind(26*32, CCFG::GAME_HEIGHT - 16 - 11*32, 207*32); // new Minion
+
 	addGoombas(704, 368, true);
 
 	addGoombas(1280, 368, true);
@@ -2464,7 +2483,7 @@ void Map::loadMinionsLVL_1_1() {
 	addGoombas(1632, 368, true);
 	addGoombas(1680, 368, true);
 
-	addGoombas(2560, 112, true);
+    addGoombas(2560, 112, true);
 	addGoombas(2624, 112, true);
 
 	addGoombas(3104, 368, true);
@@ -2555,9 +2574,9 @@ void Map::loadMinionsLVL_1_4() {
 	clearMinions();
 
 	addBowser(135*32, CCFG::GAME_HEIGHT - 16 - 6*32);
-	
+
 	addToad(153*32, CCFG::GAME_HEIGHT - 3*32, false);
-	
+
 	addFireBall(30*32, CCFG::GAME_HEIGHT - 16 - 4*32, 6, rand()%360, true);
 	addFireBall(49*32, CCFG::GAME_HEIGHT - 16 - 8*32, 6, rand()%360, true);
 	addFireBall(60*32, CCFG::GAME_HEIGHT - 16 - 8*32, 6, rand()%360, true);
@@ -2595,7 +2614,7 @@ void Map::loadMinionsLVL_2_1() {
 
 	addGoombas(162*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
 	addGoombas(163*32 + 16, CCFG::GAME_HEIGHT - 16 - 2*32, true);
-	
+
 	addKoppa(32*32 - 2, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
 	addKoppa(33*32, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
 
@@ -2608,7 +2627,7 @@ void Map::loadMinionsLVL_2_1() {
 	addKoppa(171*32, CCFG::GAME_HEIGHT - 16 - 2*32, 0, true);
 
 	addKoppa(185*32, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
-	
+
 	addPlant(46*32 + 16, CCFG::GAME_HEIGHT - 10 - 5*32);
 	addPlant(74*32 + 16, CCFG::GAME_HEIGHT - 10 - 5*32);
 	addPlant(103*32 + 16, CCFG::GAME_HEIGHT - 10 - 5*32);
@@ -2662,7 +2681,7 @@ void Map::loadMinionsLVL_2_4() {
 	clearMinions();
 
 	addBowser(135*32, CCFG::GAME_HEIGHT - 16 - 6*32);
-	
+
 	addToad(153*32, CCFG::GAME_HEIGHT - 3*32, false);
 
 	addFireBall(49*32, CCFG::GAME_HEIGHT - 16 - 5*32, 6, rand()%360, true);
@@ -2742,7 +2761,7 @@ void Map::loadMinionsLVL_3_2() {
 	addKoppa(163*32 + 16, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
 	addKoppa(165*32, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
 	addKoppa(175*32, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
-	
+
 	addGoombas(24*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
 	addGoombas(25*32 + 16, CCFG::GAME_HEIGHT - 16 - 2*32, true);
 	addGoombas(27*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
@@ -2766,7 +2785,7 @@ void Map::loadMinionsLVL_3_3() {
 	clearMinions();
 
 	addGoombas(26*32, CCFG::GAME_HEIGHT - 16 - 8*32, true);
-	
+
 	iLevelType = 3;
 
 	addKoppa(52*32, CCFG::GAME_HEIGHT - 16 - 8*32, 1, true);
@@ -2783,9 +2802,9 @@ void Map::loadMinionsLVL_3_3() {
 
 void Map::loadMinionsLVL_3_4() {
 	clearMinions();
-	
+
 	addBowser(135*32, CCFG::GAME_HEIGHT - 16 - 6*32);
-	
+
 	addToad(153*32, CCFG::GAME_HEIGHT - 3*32, false);
 
 	addFireBall(19*32, CCFG::GAME_HEIGHT - 16 - 3*32, 6, rand()%360, true);
@@ -2863,7 +2882,7 @@ void Map::loadMinionsLVL_4_3() {
 	addKoppa(78*32, CCFG::GAME_HEIGHT - 16 - 10*32, 1, true);
 
 	addKoppa(35*32, CCFG::GAME_HEIGHT - 16 - 11*32, 3, false);
-	
+
 	this->iLevelType = 0;
 }
 
@@ -2872,7 +2891,7 @@ void Map::loadMinionsLVL_4_4() {
 	clearMinions();
 
 	addBowser(167*32, CCFG::GAME_HEIGHT - 16 - 6*32);
-	
+
 	addToad(186*32, CCFG::GAME_HEIGHT - 3*32, false);
 
 	addFireBall(53*32, CCFG::GAME_HEIGHT - 16 - 8*32, 6, rand()%360, true);
@@ -2913,7 +2932,7 @@ void Map::loadMinionsLVL_5_1() {
 	addGoombas(135*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
 	addGoombas(136*32 + 16, CCFG::GAME_HEIGHT - 16 - 2*32, true);
 	addGoombas(138*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
-	
+
 	addKoppa(16*32, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
 	addKoppa(41*32, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
 	addKoppa(42*32 + 16, CCFG::GAME_HEIGHT - 16 - 2*32, 1, true);
@@ -2929,7 +2948,7 @@ void Map::loadMinionsLVL_5_1() {
 	addPlant(51*32 + 16, CCFG::GAME_HEIGHT - 10 - 4*32);
 	addPlant(156*32 + 16, CCFG::GAME_HEIGHT - 10 - 7*32);
 	addPlant(163*32 + 16, CCFG::GAME_HEIGHT - 10 - 3*32);
-	
+
 }
 
 void Map::loadMinionsLVL_5_2() {
@@ -3002,7 +3021,7 @@ void Map::loadMinionsLVL_5_4() {
 	clearMinions();
 
 	addBowser(135*32, CCFG::GAME_HEIGHT - 16 - 6*32);
-	
+
 	addToad(153*32, CCFG::GAME_HEIGHT - 3*32, false);
 
 	addFireBall(49*32, CCFG::GAME_HEIGHT - 16 - 5*32, 6, rand()%360, true);
@@ -3082,7 +3101,7 @@ void Map::loadMinionsLVL_6_2() {
 	addPlant(268*32 + 16, CCFG::GAME_HEIGHT - 10 - 5*32);
 	addPlant(274*32 + 16, CCFG::GAME_HEIGHT - 10 - 4*32);
 	addPlant(286*32 + 16, CCFG::GAME_HEIGHT - 10 - 5*32);
-	
+
 
 	addBeetle(139*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
 	addBeetle(177*32, CCFG::GAME_HEIGHT - 16 - 2*32, true);
@@ -3104,9 +3123,9 @@ void Map::loadMinionsLVL_6_4() {
 	clearMinions();
 
 	addBowser(135*32, CCFG::GAME_HEIGHT - 16 - 6*32, true);
-	
+
 	addToad(153*32, CCFG::GAME_HEIGHT - 3*32, false);
-	
+
 	addFireBall(30*32, CCFG::GAME_HEIGHT - 16 - 4*32, 6, rand()%360, true);
 	addFireBall(49*32, CCFG::GAME_HEIGHT - 16 - 8*32, 6, rand()%360, true);
 	addFireBall(60*32, CCFG::GAME_HEIGHT - 16 - 8*32, 6, rand()%360, true);
@@ -3119,7 +3138,7 @@ void Map::loadMinionsLVL_6_4() {
 	addFireBall(37*32, CCFG::GAME_HEIGHT - 16 - 8*32, 6, rand()%360, true);
 	addFireBall(80*32, CCFG::GAME_HEIGHT - 16 - 10*32, 6, rand()%360, false);
 	addFireBall(92*32, CCFG::GAME_HEIGHT - 16 - 5*32, 6, rand()%360, true);
-	
+
 	addUpFire(27*32, 9*32);
 	addUpFire(33*32, 9*32);
 	addUpFire(131*32, 9*32);
@@ -4327,7 +4346,7 @@ void Map::loadLVL_1_3() {
 	vPlatform.push_back(new Platform(6, 2, 55*32, 55*32, CCFG::GAME_HEIGHT - 16 - 9*32, CCFG::GAME_HEIGHT - 32, 55*32, (float)CCFG::GAME_HEIGHT - 32, true));
 
 	vPlatform.push_back(new Platform(6, 3, 83*32 - 16, 86*32 + 16, CCFG::GAME_HEIGHT - 16 - 6*32, CCFG::GAME_HEIGHT - 16 - 6*32, 83*32 - 16, (float)CCFG::GAME_HEIGHT - 16 - 6*32, true));
-	
+
 	vPlatform.push_back(new Platform(6, 3, 91*32 - 16, 93*32 + 16, CCFG::GAME_HEIGHT - 16 - 5*32, CCFG::GAME_HEIGHT - 16 - 5*32, 93*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 5*32, false));
 
 	vPlatform.push_back(new Platform(6, 3, 127*32 - 16, 131*32 + 16, CCFG::GAME_HEIGHT - 16 - 8*32, CCFG::GAME_HEIGHT - 16 - 8*32, 127*32 - 16, (float)CCFG::GAME_HEIGHT - 16 - 8*32, false));
@@ -4391,7 +4410,7 @@ void Map::loadLVL_1_3() {
 	structGND2(142, 2, 2, 8);
 
 	// ----- COINS
-	
+
 	structCoins(27, 10, 3, 1);
 	structCoins(33, 3, 1, 1);
 	structCoins(37, 12, 2, 1);
@@ -4477,7 +4496,7 @@ void Map::loadLVL_1_4() {
 	lMap[76][5]->setBlockID(56);
 	lMap[84][5]->setBlockID(56);
 	lMap[88][10]->setBlockID(56);
-	
+
 	struckBlockQ(30, 8, 1);
 	lMap[30][8]->setSpawnMushroom(true);
 
@@ -4706,7 +4725,7 @@ void Map::loadLVL_2_2() {
 	structGND(78, 2, 2, 3);
 	structGND(78, 10, 2, 3);
 	structGND(82, 9, 3, 1);
-	
+
 	structGND(129, 2, 1, 4);
 	structGND(130, 2, 1, 2);
 	structGND(141, 2, 1, 4);
@@ -4933,7 +4952,7 @@ void Map::loadLVL_2_3() {
 
 	structCastleBig(228, 2);
 	structCastleWall(237, 2, 13, 6);
-	
+
 	// -- END
 
 	this->iLevelType = 0;
@@ -5003,7 +5022,7 @@ void Map::loadLVL_2_4() {
 	lMap[82][8]->setBlockID(56);
 	lMap[92][4]->setBlockID(56);
 	lMap[103][3]->setBlockID(56);
-	
+
 	structCoins(102, 2, 3, 1);
 	structCoins(102, 6, 3, 1);
 
@@ -5267,7 +5286,7 @@ void Map::loadLVL_3_2() {
 	structGND(82, 0, 41, 2);
 	structGND(125, 0, 3, 2);
 	structGND(130, 0, 100, 2);
-	
+
 	structCloud(0, 10, 2);
 	structCloud(18, 10, 1);
 	structCloud(27, 11, 1);
@@ -5337,7 +5356,7 @@ void Map::loadLVL_3_2() {
 	structTree(187, 2, 1, true);
 	structTree(203, 2, 1, false);
 	structTree(205, 2, 1, true);
-	
+
 	structGND2(49, 2, 1, 1);
 	structGND2(60, 2, 1, 3);
 	structGND2(75, 2, 1, 2);
@@ -5348,7 +5367,7 @@ void Map::loadLVL_3_2() {
 
 	structCoins(55, 5, 3, 1);
 	structCoins(168, 8, 4, 1);
-	
+
 	struckBlockQ(60, 8, 1);
 	lMap[60][8]->setSpawnMushroom(true);
 
@@ -5455,7 +5474,7 @@ void Map::loadLVL_3_3() {
 
 	// -- SEESAW
 	structSeeSaw(82, 12, 8);
-	
+
 	vPlatform.push_back(new Platform(6, 6, 81*32, 81*32, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 81*32, (float)CCFG::GAME_HEIGHT - 16 - 8*32, true, 1));
 	vPlatform.push_back(new Platform(6, 6, 88*32, 88*32, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 88*32, (float)CCFG::GAME_HEIGHT - 16 - 6*32, true, 0));
 
@@ -5593,7 +5612,7 @@ void Map::loadLVL_4_1() {
 	structCloud(211, 11, 1);
 	structCloud(219, 10, 3);
 	structCloud(228, 11, 2);
-	
+
 	structGrass(11, 2, 3);
 	structGrass(23, 2, 1);
 	structGrass(41, 2, 2);
@@ -5634,7 +5653,7 @@ void Map::loadLVL_4_1() {
 	struckBlockQ(66, 9, 1);
 
 	struckBlockQ(90, 5, 4);
-	
+
 	struckBlockQ2(92, 9, 1);
 	lMap[92][9]->setSpawnMushroom(true);
 	lMap[92][9]->setPowerUP(false);
@@ -5665,7 +5684,7 @@ void Map::loadLVL_4_1() {
 
 	structGND2(225, 2, 1, 1);
 	structEnd(225, 3, 9);
-	
+
 	// -- MAP 4-1-2
 
 	this->iLevelType = 1;
@@ -5756,7 +5775,7 @@ void Map::loadLVL_4_2() {
 	structBrick(191, 2, 18, 11);
 	structBrick(209, 12, 10, 1);
 	structBrick(222, 2, 12, 18);
-	
+
 	struckBlockQ2(63, 6, 1);
 	struckBlockQ2(64, 7, 1);
 	struckBlockQ2(65, 6, 1);
@@ -5826,7 +5845,7 @@ void Map::loadLVL_4_2() {
 	}
 
 	// -- MAP 4-2-3
-	
+
 	this->iLevelType = 1;
 
 	structGND(270, 0, 17, 2);
@@ -5976,7 +5995,7 @@ void Map::loadLVL_4_3() {
 	structCloud(124, 2, 1);
 	structCloud(131, 6, 1);
 	structCloud(134, 7, 1);
-	
+
 	structTMush(16, 0, 5, 2);
 	structTMush(19, 0, 5, 10);
 	structTMush(23, 0, 7, 6);
@@ -5997,7 +6016,7 @@ void Map::loadLVL_4_3() {
 	structTMush(117, 0, 3, 9);
 	structTMush(121, 0, 7, 2);
 	structTMush(130, 0, 5, 5);
-	
+
 	structCoins(20, 10, 3, 1);
 	structCoins(24, 6, 5, 1);
 	structCoins(38, 3, 3, 1);
@@ -6025,7 +6044,7 @@ void Map::loadLVL_4_3() {
 	structSeeSaw(92, 12, 6);
 	vPlatform.push_back(new Platform(6, 6, 91*32, 91*32, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 91*32, (float)CCFG::GAME_HEIGHT - 16 - 9*32, true, 5));
 	vPlatform.push_back(new Platform(6, 6, 96*32, 96*32, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 96*32, (float)CCFG::GAME_HEIGHT - 16 - 5*32, true, 4));
-	
+
 	structSeeSaw(103, 12, 7);
 	vPlatform.push_back(new Platform(6, 6, 102*32, 102*32, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 102*32, (float)CCFG::GAME_HEIGHT - 16 - 9*32, true, 7));
 	vPlatform.push_back(new Platform(6, 6, 108*32, 108*32, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 108*32, (float)CCFG::GAME_HEIGHT - 16 - 5*32, true, 6));
@@ -6036,7 +6055,7 @@ void Map::loadLVL_4_3() {
 	vPlatform.push_back(new Platform(6, 2, 136*32, 136*32, CCFG::GAME_HEIGHT - 16 - 9*32, CCFG::GAME_HEIGHT - 48, 136*32, (float)CCFG::GAME_HEIGHT - 6*32, false));
 
 	structCastleSmall(0, 2);
-	
+
 	structGND2(147, 2, 1, 1);
 	structEnd(147, 3, 9);
 
@@ -6067,7 +6086,7 @@ void Map::loadLVL_4_4() {
 	structGND(0, 6, 4, 1);
 	structGND(0, 5, 3, 1);
 	structGND(0, 7, 3, 1);
-	
+
 	structGND(9, 0, 2, 5);
 	structGND(13, 0, 3, 5);
 
@@ -6179,7 +6198,7 @@ void Map::loadLVL_5_1() {
 	structCloud(210, 10, 1);
 	structCloud(219, 11, 1);
 	structCloud(222, 10, 1);
-	
+
 	structFence(14, 2, 4);
 	structFence(38, 2, 2);
 	structFence(41, 2, 1);
@@ -6192,7 +6211,7 @@ void Map::loadLVL_5_1() {
 	structFence(158, 2, 1);
 	structFence(160, 2, 2);
 	structFence(208, 2, 2);
-	
+
 	structGND2(90, 5, 4, 1);
 	structGND2(89, 2, 1, 4);
 	structGND2(116, 2, 1, 3);
@@ -6200,7 +6219,7 @@ void Map::loadLVL_5_1() {
 	structGND2(156, 5, 2, 1);
 	structGND2(182, 2, 5, true);
 	structGND2(189, 4, 2, 6);
-	
+
 	this->iLevelType = 4;
 
 	structTree(11, 2, 1, false);
@@ -6302,7 +6321,7 @@ void Map::loadLVL_5_2() {
 	for(int i = 0; i < 16; i++) {
 		lMap[79][i]->setBlockID(83);
 	}
-	
+
 	structGND(74, 0, 33, 2);
 	structGND(109, 0, 37, 2);
 	structGND(148, 0, 24, 2);
@@ -6532,7 +6551,7 @@ void Map::loadLVL_5_3() {
 	vPlatform.push_back(new Platform(4, 2, 55*32, 55*32, CCFG::GAME_HEIGHT - 16 - 9*32, CCFG::GAME_HEIGHT - 32, 55*32, (float)CCFG::GAME_HEIGHT - 32, true));
 
 	vPlatform.push_back(new Platform(4, 3, 83*32 - 16, 86*32 + 16, CCFG::GAME_HEIGHT - 16 - 6*32, CCFG::GAME_HEIGHT - 16 - 6*32, 83*32 - 16, (float)CCFG::GAME_HEIGHT - 16 - 6*32, true));
-	
+
 	vPlatform.push_back(new Platform(4, 3, 91*32 - 16, 93*32 + 16, CCFG::GAME_HEIGHT - 16 - 5*32, CCFG::GAME_HEIGHT - 16 - 5*32, 93*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 5*32, false));
 
 	vPlatform.push_back(new Platform(4, 3, 127*32 - 16, 131*32 + 16, CCFG::GAME_HEIGHT - 16 - 8*32, CCFG::GAME_HEIGHT - 16 - 8*32, 127*32 - 16, (float)CCFG::GAME_HEIGHT - 16 - 8*32, false));
@@ -6596,7 +6615,7 @@ void Map::loadLVL_5_3() {
 	structGND2(142, 2, 2, 8);
 
 	// ----- COINS
-	
+
 	structCoins(27, 10, 3, 1);
 	structCoins(33, 3, 1, 1);
 	structCoins(37, 12, 2, 1);
@@ -6686,7 +6705,7 @@ void Map::loadLVL_5_4() {
 	lMap[82][8]->setBlockID(56);
 	lMap[92][4]->setBlockID(56);
 	lMap[103][3]->setBlockID(56);
-	
+
 	structCoins(102, 2, 3, 1);
 	structCoins(102, 6, 3, 1);
 
@@ -6760,7 +6779,7 @@ void Map::loadLVL_6_1() {
 	structBush(96, 2, 2);
 	structBush(112, 2, 1);
 	structBush(160, 2, 1);
-	
+
 	structGrass(11, 2, 3);
 	structGrass(23, 2, 1);
 	structGrass(41, 2, 2);
@@ -6773,7 +6792,7 @@ void Map::loadLVL_6_1() {
 	structGrass(167, 2, 1);
 	structGrass(185, 2, 2);
 	structGrass(203, 2, 3);
-	
+
 	structCastleSmall(192, 2);
 
 	structGND2(26, 2, 6, 1);
@@ -6790,7 +6809,7 @@ void Map::loadLVL_6_1() {
 	structGND2(143, 2, 6, true);
 	structGND2(169, 2, 5, true);
 	structGND2(176, 2, 2, 8);
-	
+
 	struckBlockQ(16, 5, 2);
 
 	structBrick(36, 9, 2, 1);
@@ -6819,7 +6838,7 @@ void Map::loadLVL_6_1() {
 	structCoins(62, 5, 3, 1);
 	structCoins(76, 7, 2, 1);
 	structCoins(105, 6, 3, 1);
-	
+
 	this->iLevelType = 0;
 
 	structPipe(102, 2, 2);
@@ -7018,7 +7037,7 @@ void Map::loadLVL_6_2() {
 	// -- MAP 6-2-3
 
 	this->iLevelType = 1;
-	
+
 	structGND(330, 0, 17, 2);
 
 	structBrick(329, 2, 1, 18);
@@ -7142,7 +7161,7 @@ void Map::loadLVL_6_3() {
 	structCloud(142, 2, 1);
 	structCloud(147, 10, 2);
 	structCloud(153, 6, 1);
-	
+
 	structT(18, 0, 3, 2);
 	structT(21, 0, 3, 6);
 	structT(24, 0, 3, 2);
@@ -7172,17 +7191,17 @@ void Map::loadLVL_6_3() {
 
 	// -- SEESAW
 	structSeeSaw(71, 12, 5);
-	
+
 	vPlatform.push_back(new Platform(4, 6, 70*32 + 16, 70*32 + 16, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 70*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 9*32, true, 1));
 	vPlatform.push_back(new Platform(4, 6, 74*32 + 16, 74*32 + 16, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 74*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 5*32, true, 0));
 
 	structSeeSaw(79, 12, 4);
-	
+
 	vPlatform.push_back(new Platform(4, 6, 78*32 + 16, 78*32 + 16, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 78*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 9*32, true, 3));
 	vPlatform.push_back(new Platform(4, 6, 81*32 + 16, 81*32 + 16, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 81*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 5*32, true, 2));
 
 	structSeeSaw(127, 12, 4);
-	
+
 	vPlatform.push_back(new Platform(4, 6, 126*32 + 16, 126*32 + 16, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 126*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 9*32, true, 5));
 	vPlatform.push_back(new Platform(4, 6, 129*32 + 16, 129*32 + 16, CCFG::GAME_HEIGHT - 16, CCFG::GAME_HEIGHT - 16 - 11*32, 129*32 + 16, (float)CCFG::GAME_HEIGHT - 16 - 5*32, true, 4));
 
@@ -7193,7 +7212,7 @@ void Map::loadLVL_6_3() {
 	vPlatform.push_back(new Platform(4, 3, 39*32 + 16, 45*32 + 16, CCFG::GAME_HEIGHT - 9*32, CCFG::GAME_HEIGHT - 16 - 9*32, 39*32 + 16, (float)CCFG::GAME_HEIGHT - 9*32, false));
 	vPlatform.push_back(new Platform(4, 3, 45*32 + 16, 49*32 + 16, CCFG::GAME_HEIGHT - 7*32, CCFG::GAME_HEIGHT - 16 - 7*32, 45*32 + 16, (float)CCFG::GAME_HEIGHT - 7*32, true));
 	vPlatform.push_back(new Platform(4, 3, 51*32, 56*32, CCFG::GAME_HEIGHT - 8*32, CCFG::GAME_HEIGHT - 16 - 8*32, 51*32 + 16, (float)CCFG::GAME_HEIGHT - 8*32, false));
-	
+
 	vPlatform.push_back(new Platform(4, 2, 60*32, 60*32, CCFG::GAME_HEIGHT - 11*32, CCFG::GAME_HEIGHT - 16 - 2*32, 60*32, (float)CCFG::GAME_HEIGHT - 12*32, false));
 	vPlatform.push_back(new Platform(4, 2, 121*32 + 16, 121*32 + 16, CCFG::GAME_HEIGHT - 11*32, CCFG::GAME_HEIGHT - 16 - 2*32, 121*32 + 16, (float)CCFG::GAME_HEIGHT - 12*32, false));
 
@@ -7289,7 +7308,7 @@ void Map::loadLVL_6_4() {
 	lMap[76][5]->setBlockID(56);
 	lMap[84][5]->setBlockID(56);
 	lMap[88][10]->setBlockID(56);
-	
+
 	struckBlockQ(30, 8, 1);
 	lMap[30][8]->setSpawnMushroom(true);
 
@@ -7492,7 +7511,7 @@ void Map::loadLVL_7_2() {
 	structGND(78, 2, 2, 3);
 	structGND(78, 10, 2, 3);
 	structGND(82, 9, 3, 1);
-	
+
 	structGND(129, 2, 1, 4);
 	structGND(130, 2, 1, 2);
 	structGND(141, 2, 1, 4);
@@ -7719,7 +7738,7 @@ void Map::loadLVL_7_3() {
 
 	structCastleBig(228, 2);
 	structCastleWall(237, 2, 13, 6);
-	
+
 	// -- END
 
 	this->iLevelType = 0;
@@ -8020,7 +8039,7 @@ void Map::loadLVL_8_1() {
 	structFence(329, 2, 1);
 	structFence(350, 2, 4);
 	structFence(374, 2, 4);
-	
+
 	structPipe(35, 2, 3);
 	structPipe(76, 2, 3);
 	structPipe(82, 2, 2);
@@ -8032,7 +8051,7 @@ void Map::loadLVL_8_1() {
 	struckBlockQ2(80, 6, 1);
 	lMap[80][6]->setSpawnMushroom(true);
 	struckBlockQ2(158, 5, 1);
-	
+
 	structCoins(64, 6, 1, 1);
 	structCoins(89, 6, 1, 1);
 	structCoins(98, 6, 1, 1);
@@ -8069,7 +8088,7 @@ void Map::loadLVL_8_1() {
 	structGND2(364, 2, 1, 6);
 	structGND2(366, 2, 2, 8);
 	structGND2(275, 2, 6, true);
-	
+
 	structPipe(344, 2, 2);
 	structPipe(355, 2, 1);
 	structPipe(246, 2, 4);
@@ -8176,7 +8195,7 @@ void Map::loadLVL_8_2() {
 	structCloud(210, 10, 1);
 	structCloud(219, 11, 1);
 	structCloud(222, 10, 2);
-	
+
 	structFence(14, 2, 1);
 	structFence(16, 2, 1);
 	structFence(38, 2, 4);
@@ -8299,7 +8318,7 @@ void Map::loadLVL_8_3() {
 	structGND(126, 0, 2, 2);
 	structGND(130, 0, 67, 2);
 	structGND(208, 0, 31, 2);
-	
+
 	structBulletBill(18, 2, 0);
 	structBulletBill(34, 2, 1);
 	structBulletBill(86, 2, 0);
@@ -8348,7 +8367,7 @@ void Map::loadLVL_8_3() {
 	structTree(213, 2, 1, true);
 	structTree(215, 2, 1, false);
 	structTree(216, 2, 1, false);
-	
+
 	structGND2(195, 2, 1, 2);
 	structGND2(198, 3, 1, 1);
 	structGND2(200, 5, 1, 1);
@@ -8383,7 +8402,7 @@ void Map::loadLVL_8_3() {
 	structCastleWall(97, 2, 10, 6);
 	structCastleWall(132, 2, 34, 6);
 	structCastleWall(172, 2, 20, 6);
-	
+
 	structBrick(190, 5, 1, 1);
 	lMap[190][5]->setNumOfUse(10);
 
@@ -8543,7 +8562,7 @@ bool Map::blockUse(int nX, int nY, int iBlockID, int POS) {
 					lMap[nX][nY]->setNumOfUse(0);
 					lMap[nX][nY]->setBlockID(iLevelType == 0 || iLevelType == 4 ? 9 : iLevelType == 1 ? 56 : 56);
 				}
-				
+
 				lMap[nX][nY]->startBlockAnimation();
 				checkCollisionOnTopOfTheBlock(nX, nY);
 				break;
@@ -8639,7 +8658,7 @@ bool Map::blockUse(int nX, int nY, int iBlockID, int POS) {
 				break;
 		}
 	}
-	
+
 	switch(iBlockID) {
 		case 29: case 71: case 72: case 73:// COIN
 			lMap[nX][nY]->setBlockID(iLevelType == 2 ? 94 : 0);
@@ -9433,7 +9452,7 @@ void Map::EndBoss() {
 		oEvent->vOLDDir.push_back(oEvent->eNOTHING);
 		oEvent->vOLDLength.push_back(3);
 	}
-	
+
 	oEvent->vOLDDir.push_back(oEvent->eBOSSEND4);
 		oEvent->vOLDLength.push_back(1);
 
@@ -9521,7 +9540,7 @@ void Map::EndBonus() {
 			oEvent->newMapXPos = -158*32 + 16;
 			oEvent->newPlayerXPos = 128;
 			oEvent->newPlayerYPos = -oPlayer->getHitBoxY();
-			
+
 			break;
 		}
 		case 8: {
@@ -9850,7 +9869,7 @@ void Map::structBush(int X, int Y, int iSize) {
 		lMap[X + i][Y + i]->setBlockID(5);
 		lMap[X + iSize + 1 + i][Y + iSize - 1 - i]->setBlockID(6);
 	}
-	
+
 	// ----- CENTER LEFT & RIGHT
 	for(int i = 0, k = 1; i < iSize - 1; i++) {
 		for(int j = 0; j < k; j++) {
@@ -9881,7 +9900,7 @@ void Map::structCloud(int X, int Y, int iSize) {
 	// ----- LEFT
 	lMap[X][Y]->setBlockID(iLevelType == 3 ? 148 : 14);
 	lMap[X][Y + 1]->setBlockID(15);
-	
+
 	for(int i = 0; i < iSize; i++) {
 		lMap[X + 1 + i][Y]->setBlockID(iLevelType == 3 ? 149 : 16);
 		lMap[X + 1 + i][Y + 1]->setBlockID(iLevelType == 3 ? 150 : 17);
@@ -9971,7 +9990,7 @@ void Map::structPipeHorizontal(int X, int Y, int iWidth) {
 		lMap[X + 1 + i][Y]->setBlockID(iLevelType == 0 ? 61 : iLevelType == 2 ? 104 : iLevelType == 4 ? 119 : 37);
 		lMap[X + 1 + i][Y + 1]->setBlockID(iLevelType == 0 ? 59 : iLevelType == 2 ? 102 : iLevelType == 4 ? 117 : 35);
 	}
-	
+
 	lMap[X + 1 + iWidth][Y]->setBlockID(iLevelType == 0 ? 58 : iLevelType == 2 ? 101 : iLevelType == 4 ? 116 : 34);
 	lMap[X + 1 + iWidth][Y + 1]->setBlockID(iLevelType == 0 ? 63 : iLevelType == 2 ? 106 : iLevelType == 4 ? 121 : 39);
 }
@@ -10068,12 +10087,12 @@ void Map::structCastleBig(int X, int Y) {
 		}
 	}
 
-	
+
 	for(int i = 0; i < 2; i++) {
 		setBlockID(X + 3 + i*2, Y, iLevelType == 3 ? 155 : 43);
 		setBlockID(X + 3 + i*2, Y + 1, iLevelType == 3 ? 155 : 43);
 	}
-	
+
 	for(int i = 0; i < 2; i++) {
 		setBlockID(X + 3 + i*2, Y + 3, iLevelType == 3 ? 159 : 47);
 		setBlockID(X + 3 + i*2, Y + 4, iLevelType == 3 ? 158 : 46);

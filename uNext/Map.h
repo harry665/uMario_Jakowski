@@ -42,6 +42,7 @@
 #include "Points.h"
 #include "BlockDebris.h"
 #include "Bubble.h"
+#include "Wind.h"
 #include <vector>
 
 /* ******************************************** */
@@ -264,6 +265,7 @@ public:
 	void addHammer(int X, int Y, bool moveDirection);
 	void addLakito(int X, int Y, int iMaxXPos);
 	void addSpikey(int X, int Y);
+	void addWind(int X, int Y, int iMaxXPos);
 
 	void addPlayerFireBall(int X, int Y, bool moveDirection);
 

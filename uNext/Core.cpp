@@ -267,7 +267,8 @@ void CCore::InputPlayer() {
 		
 		if(mainEvent->key.keysym.sym == CCFG::keyIDShift) {
 			if(!keyShift) {
-				oMap->getPlayer()->startRun();
+                    CCore::getMap()->addWind(26*32, CCFG::GAME_HEIGHT - 16 - 11*32, 207*32);
+				//oMap->getPlayer()->startRun();
 				keyShift = true;
 			}
 		}
