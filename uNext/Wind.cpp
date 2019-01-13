@@ -92,8 +92,8 @@ void Wind::Update() {
 
         if(nextWindFrameID<= 0) {
             //the minion blast a wind and mario must get slowed - changing physics
-            CCore::getMap()->getPlayer()->setCurrentJumpSpeed(0.30f);   //7,65 normal, 0,10 ninja
-            CCore::getMap()->getPlayer()->setCurrentFallingSpeed(0.30f);
+            CCore::getMap()->getPlayer()->setCurrentJumpSpeed(0.650f);   //7,65 normal, 0,10 ninja
+            CCore::getMap()->getPlayer()->setCurrentFallingSpeed(0.65f);
             CCore::getMap()->getPlayer()->setCurrentJumpDistance(0.1f);
             //CCore::getMap()->getPlayer()->setjumpState(0);
             nextWindFrameID = 35 + rand()%175;
